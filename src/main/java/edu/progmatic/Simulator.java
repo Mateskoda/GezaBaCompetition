@@ -9,7 +9,6 @@ package edu.progmatic;
 
 import edu.progmatic.children.DullChild;
 import edu.progmatic.children.RandomChild;
-import edu.progmatic.children.SmartRandomChild;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,15 +27,13 @@ public class Simulator {
     static{
         CLASSES.add(DullChild.class);
         CLASSES.add(RandomChild.class);
-        CLASSES.add(SmartRandomChild.class);
-
     }
     
     public static void main(String[] args) {
         
         try {
             Logger.doLog = false;
-            addChildren(10);
+            addChildren(2);
             gb.startGame();
             for (int i = 0; i < 10000; i++) {
                 gb.playGame();
